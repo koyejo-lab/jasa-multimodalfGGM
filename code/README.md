@@ -20,7 +20,6 @@ Install the R packages
 ```
 Rscript install_packages.R
 ```
-if there is dependency error, try to update the R version by running `conda update --all`
 
 ### Example
 

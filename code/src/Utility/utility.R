@@ -50,7 +50,7 @@ utility.select_k <- function(corr, threshold=.5){
     return (which(abs(corr) > threshold))
 }
 
-utlity.select_km <- function(){
+utility.select_km <- function(){
     #TBD
 }
 

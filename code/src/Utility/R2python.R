@@ -14,7 +14,7 @@ utility.save_data <- function(A,D, X_score,raw_data, path, filename){
 
 }
 
-utlity.save_graphs <- function(A,B, G.true, thre=1e-3, path,  filename){
+utility.save_graphs <- function(A,B, G.true, thre=1e-3, path,  filename){
     param <- list()
     param$M <- length(A)
     param$p <- length(B)
@@ -54,7 +54,7 @@ utlity.save_graphs <- function(A,B, G.true, thre=1e-3, path,  filename){
     print("Finish saving graphs")
 }
 
-utlity.load_estimation <- function(path, filename){
+utility.load_estimation <- function(path, filename){
     obj.list = readMat(paste(path,filename,sep="/"))
     print("Finish loading data")
     print("Data names:")
