@@ -1,0 +1,9 @@
+for i in  1 2 3 4 5 6 7 8 9 10;
+do
+    mkdir -p -- "../data_sample_concate/ss_${i}"  
+    Rscript datageneration_concate.R cov_name="tridiag1" path="../data_concate_batch/ss_${i}"
+    Rscript datageneration_concate.R cov_name="tridiag2" path="../data_concate_batch/ss_${i}"
+    Rscript datageneration_concate.R cov_name="tridiag3" path="../data_concate_batch/ss_${i}"
+    Rscript datageneration_concate.R cov_name="power"    path="../data_concate_batch/ss_${i}"
+
+done
