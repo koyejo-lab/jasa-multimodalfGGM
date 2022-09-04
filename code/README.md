@@ -20,4 +20,17 @@ Install the R packages
 ```
 Rscript install_packages.R
 ```
+if there is dependency error, try to update the R version by running `conda update --all`
+
 ### Example
+
+#### Step-by-step tutorial
+
+
+#### Synthesize Toy Data
+You can generate the synthetic data by either running the scripts in `./data` or download the data from
+
+#### Run Algorithm
+
+
+### Experiment
