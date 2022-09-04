@@ -22,7 +22,8 @@ packages <- c("doParallel",
               "pracma",
               "plotly",
               "fields",
-              "viridis"
+              "viridis",
+              "wordspace"
               )
 ipak(packages)
 

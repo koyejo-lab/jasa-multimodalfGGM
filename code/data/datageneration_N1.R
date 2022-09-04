@@ -13,7 +13,7 @@ source(paste(src.path, "DataGenerationProcess", "synth_graph.R", sep="/"))
 source(paste(src.path, "DataGenerationProcess", "synth_linearop.R", sep="/"))
 
 source(paste(src.path, "Estimation", "basis_estimation.R", sep="/"))
-source(paste(src.path, "Utility", "utlity.R", sep="/"))
+source(paste(src.path, "Utility", "utility.R", sep="/"))
 source(paste(src.path, "Estimation", "cca_estimation.R", sep="/"))
 source(paste(src.path, "Utility", "R2python.R", sep="/"))
 
@@ -119,7 +119,7 @@ for (n in c(50,100,200,500)){
         #convert to regression B
         B_list <- utility.graph2B(omega,p)
         # save true graphs
-        utlity.save_graphs(A_list, B_list, G.true, thre=1e-3, path, graph.filename)
+        utility.save_graphs(A_list, B_list, G.true, thre=1e-3, path, graph.filename)
 
         #generate data 
         data <- synth.data_from_graph(n, p, cov, basis.m_list, Apinv_list,N_list, dependent=TRUE, addnoise=FALSE)
