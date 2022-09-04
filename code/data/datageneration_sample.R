@@ -77,13 +77,13 @@ for (n in c(50,100,200,500)){
             omega <- solve(omega)
         }
         if (cov_name == "tridiag1"){
-            omega <- synth.omega.tridiag1(p, k.gen)
+            omega <- synth.omega.tridiag1_v2(p, k.gen)
         }
         if (cov_name == "tridiag2"){
-            omega <- synth.omega.tridiag2(p, k.gen)
+            omega <- synth.omega.tridiag2_v2(p, k.gen)
         }
         if (cov_name == "tridiag3"){
-            omega <- synth.omega.tridiag3(p, k.gen)
+            omega <- synth.omega.tridiag3_v2(p, k.gen)
         }
 
         #ensure that the diagonal values are all 1
