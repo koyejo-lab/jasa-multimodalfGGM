@@ -73,7 +73,7 @@ for (n in N50){
 
 
         graph.filename <- paste("graph_",cov_name,"_p", p, "_N", n, "concate", sep="")
-        data.filename <- paste("data_",cov_name,"_p", p, "_N", n, , "concate", sep="")
+        data.filename <- paste("data_",cov_name,"_p", p, "_N", n, "concate", sep="")
 
         #generate data from the graph
 
