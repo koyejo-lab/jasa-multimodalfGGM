@@ -1,5 +1,3 @@
-#Description: 
-#this file implements the proposed algorithm 
 import numpy as np
 from projection import proj_A_lu, proj_B
 from cov_operator import extract_blkdiag, extract_offdiag, extract_sub
