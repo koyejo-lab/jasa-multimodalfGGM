@@ -104,7 +104,7 @@ def run_single_model(s):
 #s_list = [20]
 #s_list = [i+1 for i in range(4)]
 #Parallelization
-pool = Pool(7)
+pool = Pool(cpu_count()-2)
 #pool = Pool(1)
 start_time1 = time.time()
 results = pool.map(run_single_model, s_list)

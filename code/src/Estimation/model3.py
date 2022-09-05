@@ -240,7 +240,7 @@ class flng_model:
         self.avgBnorm.append(resB)
         self.avgAnorm.append(resA)
 
-        print('maxA', self.maxAnorm[-1]/max_trueA ,'maxB', self.maxBnorm[-1]/max_trueB, 'resA', resA/max_trueA, 'resB', resB/max_trueB)
+        #print('maxA', self.maxAnorm[-1]/max_trueA ,'maxB', self.maxBnorm[-1]/max_trueB, 'resA', resA/max_trueA, 'resB', resB/max_trueB)
         #print("resA", resA)
         #self.Adist.append(resA)
         return resA + resB
