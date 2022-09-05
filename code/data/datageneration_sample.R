@@ -57,8 +57,8 @@ N150 = c(352, 391, 440, 503, 587, 705, 881, 1175, 1762, 3525, 17626)
 
 N_list = list()
 N_list$N50  = list(N50, 50)
-N_lsit$N100 = list(N100, 100)
-N_lsit$N150 = list(N150, 150)
+N_list$N100 = list(N100, 100)
+N_list$N150 = list(N150, 150)
 
 for( li in N_list){
     for (n in li[[1]]){
