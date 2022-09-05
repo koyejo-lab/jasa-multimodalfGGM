@@ -15,3 +15,4 @@ Generate the batch of data by running the script file:
     chmod a+x run_dgp_N1.sh
     ./run_dgp_N1.sh
 ```
+
