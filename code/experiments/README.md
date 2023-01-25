@@ -17,17 +17,11 @@ Execute the following program to obtain the precision matrix, in-sample loglikli
 ```
 python run_estimation_GGM_eeg.py     #for eeg data
 python run_estimation_GGM_fmri.py    #for fmri data
-python run_estimation_GGm_latent.py  #for estimating the latent graph.
+python run_estimation_GGM_latent.py  #for estimating the latent graph.
 ```
 
-### Step 4: Vieuslization 
+### Step 4: Visuallization 
 run the notebook `visualize_precision.ipynb` to visualize the result
 
-#### Neighborhood regression
-To estimate the graph using neighborhood regression method, run the following command
 
-```
-python run_eeg.py     #for eeg data
-python run_fmri.py    #for fmri data
-```
 
