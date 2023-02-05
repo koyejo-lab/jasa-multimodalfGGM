@@ -41,7 +41,7 @@ estimate.cca.basis_expansion <- function(obj1, obj2, ncan){
     cov12 <- (d1 %*% t(d2)) / n
 
     
-    inv_cov1.s <- solve( cov1 )
+    inv_cov1.s <- solve( cov1 + 1e-8*diag(dim(cov1)[1]) )
 
     #inv_cov1.s <- solve( cov1 )
     est.r <- eigen(inv_cov1.s , symmetric=TRUE)
@@ -50,7 +50,7 @@ estimate.cca.basis_expansion <- function(obj1, obj2, ncan){
 
 
 
-    inv_cov2.s <- solve( cov2 )
+    inv_cov2.s <- solve( cov2 + 1e-8*diag(dim(cov2)[1]) )
 
     est.r <- eigen(inv_cov2.s,  symmetric=TRUE)
     inv_cov2.s <- est.r$vectors %*% diag(sqrt(est.r$values)) %*% t(est.r$vectors)
@@ -62,13 +62,13 @@ estimate.cca.basis_expansion <- function(obj1, obj2, ncan){
     eigen.m <- eigen(m, symmetric=TRUE)
     print("canonical correlation values:")
     print(eigen.m$values)
-    inv_corr <- diag(1. / sqrt(eigen.m$values[1:ncan]))
+    inv_corr <- diag(1. / sqrt(eigen.m$values[1:ncan]+1e-8))
  
     A1 <- inv_cov1.s  %*% eigen.m$vectors[,1:ncan] %*% inv_corr
     
     A2 <- inv_cov2.s %*% inv_cov2.s %*% t(cov12) %*% A1 
 
-    return(list("A1"=t(A1), "A2"=t(A2)))
+    return(list("A1"=t(A1), "A2"=t(A2), "cca"=eigen.m$values))
 
 }
 
@@ -130,6 +130,6 @@ estimate.multivariate.cca <- function(X,Y,ncan){
     
     A2 <- Y.inv.cov.s %*% Y.inv.cov.s %*% YX.cov %*% A1 
 
-    return(list("A1"=t(A1), "A2"=t(A2)))
+    return(list("A1"=t(A1), "A2"=t(A2), "cca"=eigen.m$values))
 
 }
