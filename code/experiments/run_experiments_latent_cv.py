@@ -39,8 +39,8 @@ bk_size = int(N / Kfold)
 
 
 #load data
-filename= "fmri_eeg_score.Rdata"
-path = '/home/kt14/workbench/multimodal_functional_ggm/experiments/resting_data'
+filename= "fmri_eeg_score_movie_run2.Rdata"
+path = './data/resting_data'
 
 
 name = robjects.r['load'](path+"/"+filename)
@@ -62,7 +62,7 @@ print((X[1][:,10] == eeg[10,:,:].reshape(-1)).all())
 
 
 #load A matrix 
-filename='Amatrix.Rdata'
+filename='Amatrix_movie_run2.Rdata'
 name = robjects.r['load'](path+"/"+filename)
 A1 = np.array(robjects.r[name[0]][0])[0]
 A2 = np.array(robjects.r[name[0]][1])[0]

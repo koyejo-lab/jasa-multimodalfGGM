@@ -37,7 +37,7 @@ subjects = [
 eeg_map= loadmat(path+"aparc_aseg_yeoRS7_68reg_eeg_nosubc.mat")
 yeoOrder_eeg = eeg_map['yeoOrder_eeg']
 
-savepath="../resting_data/fmri/"
+savepath="../data/fmri/"
 for s in subjects:
 
     print(s)

@@ -1,10 +1,10 @@
 from scipy.io import loadmat, savemat
 import numpy as np
 
-path = '../resting_data/eeg/'
-mat1 = loadmat(path + 'eeg_concate_run1_down70.mat')
-mat2 = loadmat(path + 'eeg_concate_run2_down70.mat')
-mat3 = loadmat(path + 'eeg_concate_run3_down70.mat')
+path = '../data/eeg/'
+mat1 = loadmat(path + 'eeg_concate_run1_down70_reduced_movie.mat')
+mat2 = loadmat(path + 'eeg_concate_run2_down70_reduced_movie.mat')
+mat3 = loadmat(path + 'eeg_concate_run3_down70_reduced_movie.mat')
 
 ts    = np.concatenate((mat1['ts'], mat2['ts'], mat3['ts']), axis=0)
 delta = np.concatenate((mat1['delta'], mat2['delta'], mat3['delta']), axis=0)
@@ -29,14 +29,14 @@ data_dict = {
 }
 
 
-savemat(path+'eeg_concate_all_down70.mat', data_dict)
+savemat(path+'eeg_concate_all_down70_reduced_movie.mat', data_dict)
 
 
 
-path = '../resting_data/fmri/'
-mat1 = loadmat(path + 'fmri_concate_run1.mat')
-mat2 = loadmat(path + 'fmri_concate_run2.mat')
-mat3 = loadmat(path + 'fmri_concate_run3.mat')
+path = '../data/fmri/'
+mat1 = loadmat(path + 'fmri_concate_run1_reduced_movie.mat')
+mat2 = loadmat(path + 'fmri_concate_run2_reduced_movie.mat')
+mat3 = loadmat(path + 'fmri_concate_run3_reduced_movie.mat')
 
 ts    = np.concatenate((mat1['ts'], mat2['ts'], mat3['ts']), axis=0)
 N = ts.shape[0]
@@ -51,4 +51,4 @@ data_dict = {
 }
 
 
-savemat(path+'fmri_concate_all.mat', data_dict)
+savemat(path+'fmri_concate_all_reduced_movie.mat', data_dict)

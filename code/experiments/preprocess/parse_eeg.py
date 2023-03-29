@@ -41,7 +41,7 @@ with open(path+'desi_brainstorm2freesurfer.txt') as f:
     pd = f.readlines()[0].split()
 desi_brainstorm2freesurfer = [int(i)-1 for i in pd]
 
-savepath="./eeg/"
+savepath="../data/eeg/"
 
 
 for s in subjects:

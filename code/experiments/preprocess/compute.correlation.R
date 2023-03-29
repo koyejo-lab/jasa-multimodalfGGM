@@ -6,11 +6,11 @@ library(fields)
 
 #load source file
 src.path <- "../../src"
-source(paste(src.path, "Utility", "utlity.R", sep="/"))
+source(paste(src.path, "Utility", "utility.R", sep="/"))
 source(paste(src.path, "Estimation", "cca_estimation.R", sep="/"))
 source(paste(src.path, "Utility", "R2python.R", sep="/"))
 
-load('../resting_data/fmri_eeg_score_movie_run3.Rdata')
+load('../data/resting_data/fmri_eeg_score_movie_run2.Rdata')
 fmri <- data$fmri
 print(paste("dimension of fmri data", dim(fmri)[1], dim(fmri)[2], dim(fmri)[3]))
 eeg <- data$eeg
@@ -97,4 +97,4 @@ source <- list()
 source$A1 <- A1
 source$A2 <- A2
 
-save(source, file="../resting_data/Amatrix_movie_run3.Rdata")
+save(source, file="../data/resting_data/Amatrix_movie_run2.Rdata")

@@ -10,7 +10,7 @@ library(wavethresh)
 
 
 #estimate score from fmri data
-fmri <- readMat('../resting_data/fmri/fmri_concate_run2_reduced_movie.mat')
+fmri <- readMat('../data/fmri/fmri_concate_run3_reduced_movie.mat')
 
 #remove first 7 samples and bottom 7 samples
 fmri.t <- fmri$ts[,,8:150]
@@ -68,7 +68,7 @@ fmri.score <- array(t(select.coef), dim=c(dim(fmri.t)[1], dim(fmri.t)[2], length
 
 #estimate score from eeg data
 
-eeg <- readMat('../resting_data/eeg/eeg_concate_run2_down70_reduced_movie.mat')
+eeg <- readMat('../data/eeg/eeg_concate_run3_down70_reduced_movie.mat')
 t.frame <- dim(eeg$ts)[3]
 eeg.arr <- array(eeg$ts, dim=c(dim(eeg$ts)[1]*dim(eeg$ts)[2], t.frame))
 
@@ -169,5 +169,5 @@ for(j in 1:dim(eeg.arr)[1]){
 eeg.score2 <- array(eeg.score, dim=c(dim(eeg$ts)[1], dim(eeg$ts)[2],length(select.idx)))
 
 data <- list(fmri=fmri.score, eeg=eeg.score2)
-save(data, file='../resting_data/fmri_eeg_score_movie_run2.Rdata')
+save(data, file='../data/resting_data/fmri_eeg_score_movie_run3.Rdata')
 print('score saved!')

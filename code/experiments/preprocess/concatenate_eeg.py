@@ -1,6 +1,12 @@
 from scipy.io import loadmat, savemat
 import numpy as np
 from scipy.signal import butter, lfilter, filtfilt
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--path', type=str, default="../data/eeg/", help="data path")
+parser.add_argument('--ssid', type=int, default=1, help="session id")
+args = parser.parse_args()
 
 def butter_bandpass(lowcut, highcut, fs, order=5):
     nyq = 0.5 * fs
@@ -55,7 +61,7 @@ subjects=[
     'T29_29'
 ]
 
-path = "../resting_data/eeg/"
+path = args.path
 data_list = list()
 delta_list = list()
 theta_list = list()
@@ -65,7 +71,8 @@ gamma_list = list()
 
 total = 150000 - (3320*2)
 total = 75000 - 3320
-idx = np.arange(0, total, 35)
+#downsample to 1024 samples
+idx = np.arange(0, total, 70)
 print(idx.shape)
 sampling_rate = 150000 / 600
 
@@ -80,7 +87,7 @@ sampling_rate = 150000 / 600
 #end 150000-3320
 print(idx)
 for s in subjects:
-    data = loadmat("{}{}_run_3.mat".format(path,s))
+    data = loadmat("{}{}_run_{}.mat".format(path,s, args.ssid))
 
     #s_data = data['ts'].squeeze()[:,3320:(150000-3320)]
     s_data = data['ts'].squeeze()[:,3320:75000]  # remove head and tail
@@ -116,4 +123,4 @@ data_dict = {'ts': np.array(data_list),
              'N': data_arr.shape[0], 'p':data_arr.shape[1], 't':data_arr.shape[2]}
 
 
-savemat(path+'eeg_concate_run3_down35_reduced_movie.mat', data_dict)
+savemat(path+'eeg_concate_run{}_down70_reduced_movie.mat'.format(args.ssid), data_dict)

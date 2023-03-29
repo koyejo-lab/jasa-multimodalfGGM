@@ -1,5 +1,13 @@
 from scipy.io import loadmat, savemat
 import numpy as np
+
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--path', type=str, default="../data/fmri/", help="data path")
+parser.add_argument('--ssid', type=int, default=1, help="session id")
+args = parser.parse_args()
+
 subjects=[
     #'T02_02',
     #'T03_03',
@@ -29,10 +37,10 @@ subjects=[
     'T29_29'
 ]
 
-path = "../resting_data/fmri/"
+path = args.path
 data_list = list()
 for s in subjects:
-    data = loadmat("{}{}_run_2.mat".format(path,s))
+    data = loadmat("{}{}_run_{}.mat".format(path,s, args.ssid))
 
     data_list.append(data['ts'].squeeze()[:,0:150])
 
@@ -40,4 +48,4 @@ data_arr = np.array(data_list)
 print(data_arr.shape)
 data_dict = {'ts':data_arr, 'N':data_arr.shape[0], 'p':data_arr.shape[1], 't':data_arr.shape[2]}
 
-savemat(path+'fmri_concate_run2_reduced_movie.mat', data_dict)
+savemat(path+'fmri_concate_run{}_reduced_movie.mat'.format(args.ssid), data_dict)

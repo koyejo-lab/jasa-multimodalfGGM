@@ -24,9 +24,9 @@ Rscript install_packages.R
 Ｓtep-by-step estimation procedures of the implmentations are under the directory `./tests/notebook/`
 
 ## Synthesize Toy Data
-You can generate the synthetic data by either running the scripts in `./data/`. The `datageneration_*.R` files include steps of the initialization of $A^m$.
+You can generate the synthetic data by either running the scripts in `./synth_data/`. The `datageneration_*.R` files include steps of the initialization of $A^m$.
 
-For detailed instruction, please check the `README` under `./data/`
+For detailed instruction, please check the `README` under `./synth_data/`
 
 ## Run Algorithm
 
@@ -34,7 +34,7 @@ For detailed instruction, please check the `README` under `./data/`
 ```
 python ./tests/run_model3.py --init [initialization procedure] --p [dimension]  --N [sample size]  --type [graph type] --filepath [path to synthetic data]  --savepath [path to store result] --noise [noise model] --thre [threshold] --lr_initb [learning rate for initializing B] --lr_a [learning rate for A] --lr_b [learning rate for B]
 ```
-The simulation configurations are stored in the shell scripts under the directory `./tests/scripts/` 
+The simulation configurations are stored in the shell scripts under the directory `./tests/scripts/`. The path to data and output might need to be modified. The data generation process is decribed in previous section. Alternatively, the data can be downloaded [here](https://drive.google.com/drive/folders/1EbHl0Q2oE_ME3WjLWINdSlg_M9VJM0Qy?usp=share_link). 
 
 ### Run cross-validation 
 ```
@@ -43,11 +43,16 @@ python ./tests/run_cv_model3.py --init [initialization procedure] --p [dimension
 
 ### Visualize the results
 
+Download the estimation results [here](https://drive.google.com/drive/folders/1EbHl0Q2oE_ME3WjLWINdSlg_M9VJM0Qy?usp=share_link):
+
+
 To visualize the results of comparison of different methods, run `./tests/notebook/plot_Comparison.ipynb`. 
 
-To visualize the results of different sample size, run `./tests/notebook/plot_SampleComplexity.ipynb`.
+To visualize the results of different sample size, run `./tests/notebook/plot_SampleComplexity.ipynb`, `./tests/notebook/plot_SampleComplexity2.ipynb`
+
+To visualize the results of variable selection, run `./tests/notebook/plot_elbo.ipynb` and `./tests/notebook/plot_VariableSelection.ipynb`
 
 
 # Experiment on Real Data
-For the details of experiments on concurrent fMRI-EEG measurements, please check the `README` under the directory `./experiments/`
+For the details of experiments on concurrent fMRI-EEG measurements, please check the `README` under the directory `./experiments/`. The experiment data is not release in public but available upon request.
 

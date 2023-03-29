@@ -1,9 +1,5 @@
-Please replace the contents of this file with relevant instructions for your repository or remove this file entirely.
+### Instruction
 
-This directory would generally contain the real data files (or facsimile versions of them in place of confidential data) and simulated data files.
+Data generation files are under `../code/synth_data`. Please see the instructions in `../code/synth_data/README.md` for more details.
 
-Cleaned data that are produced by processing raw input data might also be placed here.
-
-Code to generate the simulated data and (if relevant) and facsimile data provided in place of confidential real data might also be placed here. 
-
-Code for data cleaning could potentially also be placed here rather than in `code`.
+Alternatively, pre-generated data can be downloaded [here](https://drive.google.com/drive/folders/1EbHl0Q2oE_ME3WjLWINdSlg_M9VJM0Qy?usp=share_link)
