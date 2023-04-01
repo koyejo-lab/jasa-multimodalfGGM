@@ -1,16 +1,45 @@
 # Latent Multimodal Functional Graphical Gaussian Model
 
-This repository contains the source file and the code of the manuscript Latent Multimodal Functional Graphical Model Estimation [[1]](#1).
-
-Please see the `README.md` in each directory for more details.
 
 
+# Author Contributions Checklist Form
 
-## License 
+## Data 
+
+### Abstract 
+
+The dataset consists of simulated and real data of EEG-fMRI. The simulated data along with data generation code is available. We provide generation codes for four types of simulated graph under 2 different noise models. We will provide a download link for a simulated dataset for these four types of graphs and with the sample size 100, and the dimension 50,100,150. 
+The real data is available upon request. Since we do not own the original dataset of  concurrent measurements of EEG-fMRI, we kindly ask to send the request to the original authors referenced in the manuscript. 
+
+
+### Availability 
+
+Data is available. 
+
+### Description 
+
+
+
+## Code
+
+### Abstract 
+
+
+### Description 
+
+
+### Optional Information 
+
+The code is run under 
+R      version 3.6.0
+Python version 3.7.3
+
+### License 
 
 The code is Distributed under the MIT License. See `./code/LICENSE.txt` for more information.
 
 
-## Reference
-<a id="1">[1]</a> 
-Tsai, K., Zhao, B., Koyejo, O., & Kolar, M. (2022). Latent Multimodal Functional Graphical Model Estimation. arXiv preprint arXiv:2210.17237.
+## Instructions for use
+
+### Reproducibility 
+
