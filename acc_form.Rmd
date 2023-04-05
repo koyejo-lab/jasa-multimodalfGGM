@@ -37,7 +37,7 @@ If box above is checked and if no simulated/synthetic data files are provided by
 
 
 
-The dataset consists of simulated and real data of EEG-fMRI. The simulated data along with data generation code is available. We provide generation codes for four types of simulated graph under 2 different noise models. We will provide a download link for a simulated dataset for these four types of graphs and with the sample size 100, and the dimension 50,100,150. 
+The dataset consists of simulated and real data of EEG-fMRI. The simulated data along with data generation code is available. We provide generation code for four types of simulated graph under 2 different noise models, as detailed in Appendix K. We will provide a download link for a simulated dataset for these four types of graphs and with the sample size 100, and the dimension 50,100,150. 
 The real data is available upon request. Since we do not own the original dataset of  concurrent measurements of EEG-fMRI, we kindly ask to send the request to the original authors referenced in the manuscript. 
 
 
@@ -60,7 +60,7 @@ If the data are publicly available, see the *Publicly available data* section. O
 - [x] Data are or will be made available through some other mechanism, described here:
 
 
-The data we use is originally from Sadaghiani et al. (2010). Please contact the first author to request the data. The simulated data are available  in the above link. Partial simulated data, i.e, the data that runs the sample complexity in section 7.2 of the manuscript is not available online due to the fact that the size is too big (~1TB). But the data generation code is provided so practitioners can generate data on their own.  
+The data we use is originally from Sadaghiani et al. (2010). Please contact the first author to request the data. The simulated data are available in the above link. Partial simulated data, i.e, the data that runs the sample complexity in section 7.2 of the manuscript is not available online due to the fact that the size is too big (~1TB). But the data generation code is provided so practitioners can generate data on their own.  
 
 Reference
 
