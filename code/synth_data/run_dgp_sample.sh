@@ -4,6 +4,5 @@ do
     Rscript datageneration_sample.R cov_name="tridiag1" path="../../data/data_sample_batch/ss_${i}"
     Rscript datageneration_sample.R cov_name="tridiag2" path="../../data/data_sample_batch/ss_${i}"
     Rscript datageneration_sample.R cov_name="tridiag3" path="../../data/data_sample_batch/ss_${i}"
-    Rscript datageneration_sample.R cov_name="power"    path="../../data/data_sample_batch/ss_${i}"
 
 done
