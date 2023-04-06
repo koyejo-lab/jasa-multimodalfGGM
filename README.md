@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 <!--HOW TO COMPLETE THIS FORM:-->
 
 <!--
@@ -176,7 +181,14 @@ Python version 3.7.3
     - iterators_1.0.10
     - foreach_1.4.4  
 - Python packages
-    - please check the `environment.yml` under `code/`.
+    - Python packages
+    - numpy_1.19.1
+    - scipy_1.5.2
+    - pathos_0.2.8
+    - matplotlib_3.4.3
+    - multiprocessing_0.70.12.2
+    - nilearn_0.9.0
+    - rpy2_2.9.4
 
 ### Supporting system/hardware requirements (optional)
 
@@ -400,6 +412,7 @@ Approximate time needed to reproduce the analyses on a standard desktop machine:
 - [ ] 1-8 hours
 - [ ] > 8 hours
 - [x] Not feasible to run on a desktop machine, as described here:
+It is safest to run on a cluster as original tests are implemented with parallelization. One can modify the number of cores in the test file to make it suitable for a desktop machine.
 
 ### Additional information (optional)
 
