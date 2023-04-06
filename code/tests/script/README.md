@@ -10,8 +10,7 @@
   * script file: `./code/tests/script/noise_model_2/*N100.sh`.
   Modify the script file to specify the conda environment, file path, and save path.
 * Visualization
-  * result download [link](https://drive.google.com/drive/folders/1praDtxiYMUVCNnnp30SG3JE5REIVCz7d?usp=sharing)
-  The directory `/proposed` contain the results of proposed method. The directory `/comparison/` constain the results of other comparison methods. 
+  * result download [link](https://drive.google.com/drive/folders/1praDtxiYMUVCNnnp30SG3JE5REIVCz7d?usp=sharing). The directory `/proposed` contain the results of proposed method. The directory `/comparison/` constain the results of other comparison methods. 
   * visualization notebook: `/code/notebook/plot_Comparison.ipynb`
   * instruction to generate table:
   to print the AUC and AUC15, set `verbose=True`
