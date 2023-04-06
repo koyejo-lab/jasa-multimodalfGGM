@@ -2,18 +2,18 @@
 
 
 ## Figure 2/Table 3
-    - Data preparation
-        - Data generation script: `./code/synth_data/run_dgp_N2.sh`
-        - Data downlaod [link](https://drive.google.com/drive/folders/1V-UalL77ybJZ8yq7mzkb1o1EeVDLR5Mw?usp=share_link)
+    * Data preparation
+        * Data generation script: `./code/synth_data/run_dgp_N2.sh`
+        * Data downlaod [link](https://drive.google.com/drive/folders/1V-UalL77ybJZ8yq7mzkb1o1EeVDLR5Mw?usp=share_link)
         and put the files under `data_batch_N2`
-    - Estimation 
-        - script file: `./code/tests/script/noise_model_2/*N100.sh`.
+    * Estimation 
+        * script file: `./code/tests/script/noise_model_2/*N100.sh`.
         Modify the script file to specify the conda environment, file path, and save path.
-    - Visualization
-        - result download [link](https://drive.google.com/drive/folders/1V-UalL77ybJZ8yq7mzkb1o1EeVDLR5Mw?usp=share_link)
+    * Visualization
+        * result download [link](https://drive.google.com/drive/folders/1V-UalL77ybJZ8yq7mzkb1o1EeVDLR5Mw?usp=share_link)
         The directory `/proposed` contain the results of proposed method. The directory `/comparison/` constain the results of other comparison methods. 
-        - visualization notebook: `/code/notebook/plot_Comparison.ipynb`
-        - instruction to generate table:
+        * visualization notebook: `/code/notebook/plot_Comparison.ipynb`
+        * instruction to generate table:
         to print the AUC and AUC15, set `verbose=True`
 
 ## Figure 3
