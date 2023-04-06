@@ -98,7 +98,7 @@
   - script file: `./code/tests/script/noise_model_2/`.
   Modify the script file to specify the conda environment, file path, and save path
 - Visualization
-  - result downloaded [link](https://drive.google.com/drive/folders/1LjQwRMvyhTJv2HB1xa3-TsCTQCPDp46H?usp=sharing)
+  - result download [link](https://drive.google.com/drive/folders/1LjQwRMvyhTJv2HB1xa3-TsCTQCPDp46H?usp=sharing)
   - visualization notebook: `/code/tests/notebook/plot_VariableSelection.ipynb`
 ## Figure 12
 - Data preparation
