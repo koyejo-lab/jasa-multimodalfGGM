@@ -31,10 +31,20 @@ For detailed instruction, please check the `README` under `./synth_data/`
 ## Run Algorithm
 
 ### Run main experiments 
+To execute the program parallelly, execute the following command. This code estimates the graph in a range of sparsity levels and is required to run on multi-core machine.
 ```
 python ./tests/run_model3.py --init [initialization procedure] --p [dimension]  --N [sample size]  --type [graph type] --filepath [path to synthetic data]  --savepath [path to store result] --noise [noise model] --thre [threshold] --lr_initb [learning rate for initializing B] --lr_a [learning rate for A] --lr_b [learning rate for B]
 ```
 The simulation configurations are stored in the shell scripts under the directory `./tests/scripts/`. The path to data and output might need to be modified. The data generation process is decribed in previous section. Alternatively, the data can be downloaded [here](https://drive.google.com/drive/folders/1EbHl0Q2oE_ME3WjLWINdSlg_M9VJM0Qy?usp=share_link). 
+
+To execute the program with sepcific sparsity level, execute the following command.
+
+
+```
+python ./tests/run_single_model3.py --init [initialization procedure] --p [dimension]  --N [sample size]  --type [graph type] --filepath [path to synthetic data]  --savepath [path to store result] --noise [noise model] --thre [threshold] --lr_initb [learning rate for initializing B] --lr_a [learning rate for A] --lr_b [learning rate for B] --s [sparsity level]
+```
+
+The estimated model will be stored in an `.npy` file and the estimation result will be stored in a `.csv` file.
 
 ### Run cross-validation 
 ```
