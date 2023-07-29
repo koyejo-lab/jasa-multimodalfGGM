@@ -37,7 +37,7 @@ python ./tests/run_model3.py --init [initialization procedure] --p [dimension]  
 ```
 The simulation configurations are stored in the shell scripts under the directory `./tests/scripts/`. The path to data and output might need to be modified. The data generation process is described in the previous section. Alternatively, the data can be downloaded [here](https://drive.google.com/drive/folders/1EbHl0Q2oE_ME3WjLWINdSlg_M9VJM0Qy?usp=share_link). 
 
-To execute the program with a specific sparsity level, use the following command.
+To execute the program with a specific sparsity level, use the following command. This program is suitable to run on single machine.
 
 ```
 python ./tests/run_single_model3.py --init [initialization procedure] --p [dimension]  --N [sample size]  --type [graph type] --filepath [path to synthetic data]  --savepath [path to store result] --noise [noise model] --thre [threshold] --lr_initb [learning rate for initializing B] --lr_a [learning rate for A] --lr_b [learning rate for B] --s [sparsity level]
