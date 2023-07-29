@@ -65,12 +65,13 @@ If the data are publicly available, see the *Publicly available data* section. O
 - [x] Data are or will be made available through some other mechanism, described here:
 
 
-The data we use is originally from Sadaghiani et al. (2010). Please contact the first author to request the data. The simulated data are available in the above link. Partial simulated data, i.e, the data that run the sample complexity in section 7.2 of the manuscript are not available online due to the fact that the size is too big (~1TB). But the data generation code is provided so practitioners can generate data on their own.  
+The data we use is originally from Morillon et al. (2010). We have contacted the data owner, Anne-Lise Giraud, for data sharing.
+She has agreed to share data when individuals request it. Please contact the Anne-Lise Giraud (email:anne-lise.giraud-mamessier@pasteur.fr) to request the data. 
+The simulated data are available in the above link. Partial simulated data, i.e, the data that run the sample complexity in section 7.2 of the manuscript are not available online due to the fact that the size is too big (~1TB). But the data generation code is provided so practitioners can generate data on their own.  
 
 Reference
 
-Sadaghiani, S., Scheeringa, R., Lehongre, K., Morillon, B., Giraud, A. L., & Kleinschmidt, A. (2010). Intrinsic connectivity networks, alpha oscillations, and tonic alertness: a simultaneous electroencephalography/functional magnetic resonance imaging study. Journal of Neuroscience, 30(30), 10243-10250.
-
+Morillon, B., Lehongre, K., Frackowiak, R. S., Ducorps, A., Kleinschmidt, A., Poeppel, D., & Giraud, A. L. (2010). Neurophysiological origin of human brain asymmetry for speech and language. Proceedings of the National Academy of Sciences, 107(43), 18688-18693.
 
 ### Non-publicly available data
 
@@ -181,7 +182,6 @@ Python version 3.7.3
     - iterators_1.0.10
     - foreach_1.4.4  
 - Python packages
-    - Python packages
     - numpy_1.19.1
     - scipy_1.5.2
     - pathos_0.2.8
@@ -391,7 +391,7 @@ The code for the first step is under the directory `code/synth_data`. The file f
   - Result download [link](https://drive.google.com/drive/folders/1ItaHAojkT2SrK2Ei2bGUU6QJ_WErvej9?usp=sharing)
   - Visualization notebook: `/code/notebook/plot_Comparison.ipynb`
   - Instruction to generate table: to print the AUC and AUC15, set `verbose=True`
-  
+
 ##### Figure 14/Table 7
 - Data preparation
   - Data generation script: `./code/synth_data/run_dgp_kmk.sh`
@@ -402,6 +402,8 @@ The code for the first step is under the directory `code/synth_data`. The file f
   - Result download [link](https://drive.google.com/drive/folders/1ItaHAojkT2SrK2Ei2bGUU6QJ_WErvej9?usp=sharing)
   - Visualization notebook: `/code/notebook/plot_Comparison.ipynb`
   - Instruction to generate table: to print the AUC and AUC15, set `verbose=True`
+
+
 ### Expected run-time
 
 Approximate time needed to reproduce the analyses on a standard desktop machine:
@@ -416,6 +418,7 @@ It is safest to run on a cluster as original tests are implemented with parallel
 
 ### Additional information (optional)
 
+We provide a demo example that can be run on standard desktop. Please see the `/code/README.md` for further instruction.
 <!--
 OPTIONAL: Additional documentation provided (e.g., R package vignettes, demos or other examples) that show how to use the provided code/software in other settings.
 -->
