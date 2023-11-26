@@ -3,6 +3,10 @@ output:
   pdf_document: default
   html_document: default
 ---
+
+# Latent Multimodal Functional Graphical Model Estimation
+
+This repository implements the method developed in [Latent Multimodal Functional Graphical Model Estimation](https://www.tandfonline.com/doi/abs/10.1080/01621459.2023.2252142).
 <!--HOW TO COMPLETE THIS FORM:-->
 
 <!--
